@@ -1,14 +1,48 @@
-        .container {
+
+        .main-container {
             height: 100vh;
-            padding: 10px;
         }
-        
+
+        .navbar-top {
+            height: 80px; 
+            font-size: larger;
+            border: 1px solid #189ea3;
+        }
+        .bradcum {
+            height: 30px;
+            border: 1px solid #189ea3;
+            margin: 5px;
+        }
+
+        .container {
+            /* height: 100vh; */
+            padding: 10px;
+
+        }
+
         .card {
             padding: 10px;
             width: 18%;
-            float: left;
+           float: left;
         }
         
+        #product {
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+        }
+
+        @media only screen and (min-width: 0px) and (max-width: 375px){
+            #product {
+                grid-template-columns: repeat(3,1fr);
+            }
+        }
+        
+        @media only screen and (min-width:376px ) and (max-width:768px) {
+            #product {
+                grid-template-columns: repeat(5,1fr);
+            }
+        }
+
         .card-body:hover {
             box-shadow: 5px 4px 5px 4px rgba(0, 0, 0, .3);
         }
@@ -27,6 +61,7 @@
             font-weight: 500;
             padding: 3px;
             float: left;
+            color: #189ea3;
         }
         
         .p-2 {
@@ -83,4 +118,20 @@
             margin: 4px 2px;
             background-color: #189ea3;
             float: right;
+        }
+
+        .back-button-bottom {
+            
+            border: 1px solid #189ea3;
+            border-radius: 5px;
+            color: #189ea3;
+            text-align: center;
+            font-size: 14px;
+            padding: 8px 40px;
+            margin: 4px 2px;
+            background-color: white;
+        }
+        .back-button-bottom:hover {
+            background-color: #189ea3;
+            color: black;
         }
