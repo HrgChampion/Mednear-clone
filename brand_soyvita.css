@@ -58,7 +58,7 @@ justify-content: space-between;
  #button{
      color:white;
      background-color: #189ea3;
-     padding:15px;
+     padding:13px;
      border-radius: 10px;
  }
  
@@ -91,3 +91,161 @@ justify-content: space-between;
  #eachsoyvita:hover,#eachsoyvita1:hover,#eachsoyvita2:hover{
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
  }
+ 
+ #button{
+     display:flex;
+     
+     
+ }
+ #button>button{
+     width:20px;
+     height:20px;
+    margin: 0px 10px;
+     background-color: #189ea3;
+     color:white;
+     font-weight: bolder;
+     border:0;
+     font-size: 23px;
+     border-radius: 5px;
+ }
+ #num{
+     margin-top: 5px;
+ }
+ #main{
+    margin-top:50px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: white;
+}
+#payment{
+    text-align: center;
+    margin-top:50px;
+}
+#main>div{
+    margin-top: 30px;
+}
+#brand{
+    margin: auto;
+    text-align: center;
+    width: 90%;
+}
+#brand>a:hover{
+    color:#189ea3;
+
+}
+a{
+    text-decoration: none;
+    color: #4d4e4e;
+    margin-left: 10px;
+}
+h3{
+    color: #4d4e4e;
+    margin-top: 10px;
+}
+#online{
+    margin: auto;
+    text-align: center;
+    width: 90%;
+    color: #4d4e4e;
+}
+#mednear{
+    margin: auto;
+    margin-top: 40px;
+    text-align: center;
+    width: 90%;
+    color: #4d4e4e;
+}
+#blog{
+    margin: auto;
+    margin-top: 40px;
+    width: 90%;
+    color: #4d4e4e;
+    display: flex;
+    justify-content: space-around;
+}
+#blog>div>p:hover{
+color:#189ea3;
+}
+#end{
+    margin: auto;
+    margin-top: 40px;
+    text-align: center;
+    width: 90%;
+    color: #4d4e4e;
+}
+b{color: #4d4e4e;}
+#end>p{font-size: 12px;}
+
+/* <!-- Iphonex --> */
+
+@media only screen and (min-width:0px) and (max-width:376px){
+    #Soyvita{
+        display:grid;
+        grid-template-rows:repeat(5,300px);
+        grid-template-columns: repeat(2,180px);
+        grid-gap:5px;
+        margin-left: 0;
+        
+    }
+    #Soyvita>div>div>img{
+        width:70px;
+       height:70px; 
+       margin-left:50px;
+    }
+    #button{
+        color:white;
+        background-color: #189ea3;
+        padding:5px;
+        border-radius: 10px;
+    }
+    #payment>img{
+        width:360px;
+    }
+    #blog{
+        
+        margin-top: 40px;
+        width: 95%;
+        color: #4d4e4e;
+        display: flex;
+        
+    }
+    #blog>div:nth-child(1){
+        width:90px;
+
+    }
+    #blog>div:nth-child(2),#blog>div:nth-child(3){
+        width:85px;
+
+    }
+    
+
+    #blog>div:nth-child(4)>img{
+        width:90px;
+        margin-left:15px;
+    }
+
+
+}
+@media only screen and (min-width:377px) and (max-width:770px){
+    #Soyvita{
+        display:grid;
+        grid-template-rows:repeat(3,1fr);
+        grid-template-columns: repeat(3,245px);
+        grid-gap:11px;
+        margin-left: 0;
+        
+    }
+    #main{
+        width:95%;
+    }
+    #navbar{
+        width:95%;
+    }
+    #payment>img{
+        width:80%;
+    }
+    #tag{
+        width:80%;
+    }
+    
+
+}
