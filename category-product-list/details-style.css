@@ -77,6 +77,13 @@
     width: 400px;
 }
 
+.small-image {
+   
+}
+
+
+
+
 .product-name-xl {
     font-size: 24px;
     line-height: 18px;
@@ -139,6 +146,11 @@
     background-color: #189ea3;
     margin-top: 15px;
     
+}
+.button-2:hover{
+    cursor: pointer;
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px;
+    transform: translateY(-2px);
 }
 
 .button-back {

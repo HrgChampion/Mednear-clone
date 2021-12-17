@@ -5,10 +5,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>homeopathy-details</title>
+    <title>homeopathy_detail</title>
     <link rel="stylesheet" href="details-style.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="footer.css">
+    <link rel="icon" href="http://example.com/favicon.png">
 </head>
 
 <body class="bg-shade">
@@ -20,6 +21,11 @@
             <div class="product-detail-image">
                 <img src="https://mednear.com/uploads/medicine/0c9b1dbfaeb21f9f0d8305888de0c5b6.jpg" alt="" />
             </div>
+
+            <div class="small-image">
+                <img src="" alt="">
+            </div>
+
             <button class="button-29 blue" role="button" onclick="takeMeToLink('facebook')">Facebook</button>
             
             <button class="button-29 sky" role="button" onclick="takeMeToLink('tweeter')">tweeter</button>
@@ -43,7 +49,7 @@
                 </span>
 
                 <br />
-                <button class="button-2">Add to Cart</button>
+                <button class="button-2" onclick="goToAddToCartPage('go')">Add to Cart</button>
                 <br /><br />
                 <div class="note">
                     NOTE: Availability / Confirmation & Deliveries of product will be assured once the Pharmacy partners
@@ -114,8 +120,8 @@
                             <li>Store in a cool and dry place</li>
                         </ul>
                     </div>
-                    <button class="button-back">&#8592; Back </button>
-
+                    <button class="button-back" onclick="backToListPage('page')"> &#8592; Back </button>
+                   
                 </div>
             </div>
         </section>
@@ -133,7 +139,7 @@
                         </div>
                         <h3 class="product-name">SBL FORMICA RUFA DILUTION 1000 CH</h3>
                         <div class="product-label mb-2">bottle of 30 ml Dilution</div>
-                        <button class="button" data-id="${product.id}">
+                        <button class="button" onclick="backToListPage('page')" data-id="${product.id}">
                             Add to Cart
                         </button>
                         <div class="product-price">
@@ -153,7 +159,7 @@
                         </div>
                         <h3 class="product-name">SBL GINSENG DILUTION 1000 CH</h3>
                         <div class="product-label mb-2">bottle of 30 ml Dilution</div>
-                        <button class="button" data-id="${product.id}">
+                        <button class="button" onclick="backToListPage('page')" data-id="${product.id}">
                             Add to Cart
                         </button>
                         <div class="product-price">
@@ -173,7 +179,7 @@
                         </div>
                         <h3 class="product-name">SBL FORMICA RUFA DILUTION 1000 CH</h3>
                         <div class="product-label mb-2">bottle of 30 ml Dilution</div>
-                        <button class="button">
+                        <button class="button" onclick="backToListPage('page')">
                             Add to Cart
                         </button>
                         <div class="product-price">
@@ -195,7 +201,7 @@
                             SBL GAULTHERIA PROCUMBENS DILUTION 30 CH
                         </h3>
                         <div class="product-label mb-2">bottle of 30 ml Dilution</div>
-                        <button class="button" data-id="${product.id}">
+                        <button class="button" onclick="backToListPage('page')" data-id="${product.id}">
                             Add to Cart
                         </button>
                         <div class="product-price">
@@ -358,6 +364,10 @@
 </body>
 
 <script>
+    var data = JSON.parse(window.localStorage.getItem('data'));
+    let url = new URL(window.location.href);
+    const id = url.searchParams.get('id');
+    console.log(id);
     function takeMeToLink(site) {
         if (site == 'facebook') {
             window.location.href = "https://www.facebook.com";
@@ -371,6 +381,24 @@
         }
         else console.log('site not found');
     }
+
+    function backToListPage(set){
+                            if(set == 'page' ){
+                                window.location.href = "homeopathy.html";
+                            }
+                            else {
+                                console.log('site not found');
+                            }
+                        }
+
+        function goToAddToCartPage(goToCart){
+            if(goToCart == 'go'){
+                window.location.href = "cart.html";
+            }
+            else {
+                console.log('site not found');
+            }
+        }
 </script>
 
 </html>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>homeopathy</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="footer.css">
@@ -26,14 +26,14 @@
         <div class="container">
             <section class="row" id="products"></section>
             <button class="back-button-bottom">BACK</button>
-            
+
         </div>
-        
-        
+
+
 
 
         <div id="footer">
-            <div id="payment">              
+            <div id="payment">
                 <h3>PAYMENT METHOD</h3>
                 <img src="https://mednear.com/assets/web/images/others/payments.png?0.2" alt="payment">
             </div>
@@ -160,134 +160,136 @@
 </body>
 
 <script>
-    var data = [{
-        "id": 1,
-        "discount": "1",
-        "image": "https://mednear.com/uploads/medicine/0c9b1dbfaeb21f9f0d8305888de0c5b6.jpg",
-        "title": "SBL FORMICA RUFA DILUTION 1000 CH",
-        "discription": "bottle of 30 ml Dilution",
-        "currentPrice": "118.00",
-        "price": "120.00"
-    }, {
-        "id": 2,
-        "discount": "1",
-        "image": "https://mednear.com/uploads/medicine/4d5526dea6abc5f349c6baa25d06f688.png",
-        "title": "SBL GINSENG DILUTION 1000 CH",
-        "discription": "bottle of 30 ml Dilution",
-        "currentPrice": "17.00",
-        "price": "19.05"
-    }, {
-        "id": 3,
-        "discount": "1",
-        "image": "https://mednear.com/uploads/medicine/3a6113060913ed8e34e33efdd9fe0494.jpg",
-        "title": "SBL GAULTHERIA PROCUMBENS DILUTION 30 CH",
-        "discription": "bottle of 30 ml Dilution",
-        "currentPrice": "84.15",
-        "price": "85.00"
-    }, {
-        "id": 4,
-        "discount": "1",
-        "image": "https://mednear.com/uploads/medicine/836c2810b3347295726e274c8b12d530.png",
-        "title": "SBL 101 DIABETIC CARE PACK (COMBO OF 2)",
-        "discription": "Packet of 1 kit",
-        "currentPrice": "289.05",
-        "price": "295.00"
-    }, {
-        "id": 5,
-        "discount": "1",
-        "image": "https://mednear.com/uploads/icons/otc.png",
-        "title": "SBL GAULTHERIA PROCUMBENS DILUTION 1000 CH",
-        "discription": "bottle of 30 ml Dilution",
-        "currentPrice": "65.85",
-        "price": "70.00"
-    }, {
-        "id": 6,
-        "discount": "1",
-        "image": "https://mednear.com/uploads/medicine/4d5526dea6abc5f349c6baa25d06f688.png",
-        "title": "SBL LIQUID HAND WASH GERM FREE",
-        "discription": "bottle of 300 ml",
-        "currentPrice": "96.03",
-        "price": "97.00"
-    }, {
-        "id": 7,
-        "discount": "1",
-        "image": "https://mednear.com/uploads/medicine/241b6fbcfa04407eb5009b14a6c6e8c2.png",
-        "title": "SBL GINSENG DILUTION 200 CH",
-        "discription": "bottle of 30 ml Dilution",
-        "currentPrice": "94.05",
-        "price": "95.00"
-    }, {
-        "id": 8,
-        "discount": "1",
-        "image": "https://mednear.com/uploads/medicine/4d5526dea6abc5f349c6baa25d06f688.png",
-        "title": "SBL GINSENG DILUTION 200 CH",
-        "discription": "bottle of 30 ml Dilution",
-        "currentPrice": "212.36",
-        "price": "218.00"
-    }, {
-        "id": 9,
-        "discount": "1",
-        "image": "https://mednear.com/uploads/medicine/b18fecf51bf0e7a01937bfc8cbcd5ff1.jpg",
-        "title": "SBL GINSENG DILUTION 200 CH",
-        "discription": "bottle of 30 ml Dilution",
-        "currentPrice": "44.05",
-        "price": "47.00"
-    }, {
-        "id": 10,
-        "discount": "1",
-        "image": "https://mednear.com/uploads/medicine/0f2ac3530564254da7f82d1fb63aeb3c.jpg",
-        "title": "SBL GINSENG DILUTION 200 CH",
-        "discription": "bottle of 30 ml Dilution",
-        "currentPrice": "94.05",
-        "price": "95.00"
-    }, {
-        "id": 11,
-        "discount": "1",
-        "image": "https://mednear.com/uploads/icons/otc.png",
-        "title": "SBL GINSENG DILUTION 200 CH",
-        "discription": "bottle of 30 ml Dilution",
-        "currentPrice": "94.05",
-        "price": "95.00"
-    }, {
-        "id": 12,
-        "discount": "1",
-        "image": "https://mednear.com/uploads/medicine/ede5f4e0df80734ab5c1cd3b8b6c9623.png",
-        "title": "SBL GINSENG DILUTION 200 CH",
-        "discription": "bottle of 30 ml Dilution",
-        "currentPrice": "94.05",
-        "price": "95.00"
-    }, {
-        "id": 13,
-        "discount": "1",
-        "image": "https://mednear.com/uploads/medicine/defd61ca9308614675e4849ef9006479.png",
-        "title": "SBL GINSENG DILUTION 200 CH",
-        "discription": "bottle of 30 ml Dilution",
-        "currentPrice": "94.05",
-        "price": "95.00"
-    }, {
-        "id": 14,
-        "discount": "1",
-        "image": "https://mednear.com/uploads/medicine/409e8a3727b32dbb18f5fafd9b0cdcd7.jpg",
-        "title": "SBL GINSENG DILUTION 200 CH",
-        "discription": "bottle of 30 ml Dilution",
-        "currentPrice": "94.05",
-        "price": "95.00"
-    }, {
-        "id": 15,
-        "discount": "1",
-        "image": "https://mednear.com/uploads/icons/otc.png",
-        "title": "SBL GINSENG DILUTION 200 CH",
-        "discription": "bottle of 30 ml Dilution",
-        "currentPrice": "94.05",
-        "price": "95.00"
-    },];
+    var data = JSON.parse(window.localStorage.getItem('data'));
+    // var data = [{
+    //     "id": 1,
+    //     "discount": "1",
+    //     "image": "https://mednear.com/uploads/medicine/0c9b1dbfaeb21f9f0d8305888de0c5b6.jpg",
+    //     "title": "SBL FORMICA RUFA DILUTION 1000 CH",
+    //     "discription": "bottle of 30 ml Dilution",
+    //     "currentPrice": "118.00",
+    //     "price": "120.00"
+    // }, {
+    //     "id": 2,
+    //     "discount": "1",
+    //     "image": "https://mednear.com/uploads/medicine/4d5526dea6abc5f349c6baa25d06f688.png",
+    //     "title": "SBL GINSENG DILUTION 1000 CH",
+    //     "discription": "bottle of 30 ml Dilution",
+    //     "currentPrice": "17.00",
+    //     "price": "19.05"
+    // }, {
+    //     "id": 3,
+    //     "discount": "1",
+    //     "image": "https://mednear.com/uploads/medicine/3a6113060913ed8e34e33efdd9fe0494.jpg",
+    //     "title": "SBL GAULTHERIA PROCUMBENS DILUTION 30 CH",
+    //     "discription": "bottle of 30 ml Dilution",
+    //     "currentPrice": "84.15",
+    //     "price": "85.00"
+    // }, {
+    //     "id": 4,
+    //     "discount": "1",
+    //     "image": "https://mednear.com/uploads/medicine/836c2810b3347295726e274c8b12d530.png",
+    //     "title": "SBL 101 DIABETIC CARE PACK (COMBO OF 2)",
+    //     "discription": "Packet of 1 kit",
+    //     "currentPrice": "289.05",
+    //     "price": "295.00"
+    // }, {
+    //     "id": 5,
+    //     "discount": "1",
+    //     "image": "https://mednear.com/uploads/icons/otc.png",
+    //     "title": "SBL GAULTHERIA PROCUMBENS DILUTION 1000 CH",
+    //     "discription": "bottle of 30 ml Dilution",
+    //     "currentPrice": "65.85",
+    //     "price": "70.00"
+    // }, {
+    //     "id": 6,
+    //     "discount": "1",
+    //     "image": "https://mednear.com/uploads/medicine/4d5526dea6abc5f349c6baa25d06f688.png",
+    //     "title": "SBL LIQUID HAND WASH GERM FREE",
+    //     "discription": "bottle of 300 ml",
+    //     "currentPrice": "96.03",
+    //     "price": "97.00"
+    // }, {
+    //     "id": 7,
+    //     "discount": "1",
+    //     "image": "https://mednear.com/uploads/medicine/241b6fbcfa04407eb5009b14a6c6e8c2.png",
+    //     "title": "SBL GINSENG DILUTION 200 CH",
+    //     "discription": "bottle of 30 ml Dilution",
+    //     "currentPrice": "94.05",
+    //     "price": "95.00"
+    // }, {
+    //     "id": 8,
+    //     "discount": "1",
+    //     "image": "https://mednear.com/uploads/medicine/4d5526dea6abc5f349c6baa25d06f688.png",
+    //     "title": "SBL GINSENG DILUTION 200 CH",
+    //     "discription": "bottle of 30 ml Dilution",
+    //     "currentPrice": "212.36",
+    //     "price": "218.00"
+    // }, {
+    //     "id": 9,
+    //     "discount": "1",
+    //     "image": "https://mednear.com/uploads/medicine/b18fecf51bf0e7a01937bfc8cbcd5ff1.jpg",
+    //     "title": "SBL GINSENG DILUTION 200 CH",
+    //     "discription": "bottle of 30 ml Dilution",
+    //     "currentPrice": "44.05",
+    //     "price": "47.00"
+    // }, {
+    //     "id": 10,
+    //     "discount": "1",
+    //     "image": "https://mednear.com/uploads/medicine/0f2ac3530564254da7f82d1fb63aeb3c.jpg",
+    //     "title": "SBL GINSENG DILUTION 200 CH",
+    //     "discription": "bottle of 30 ml Dilution",
+    //     "currentPrice": "94.05",
+    //     "price": "95.00"
+    // }, {
+    //     "id": 11,
+    //     "discount": "1",
+    //     "image": "https://mednear.com/uploads/icons/otc.png",
+    //     "title": "SBL GINSENG DILUTION 200 CH",
+    //     "discription": "bottle of 30 ml Dilution",
+    //     "currentPrice": "94.05",
+    //     "price": "95.00"
+    // }, {
+    //     "id": 12,
+    //     "discount": "1",
+    //     "image": "https://mednear.com/uploads/medicine/ede5f4e0df80734ab5c1cd3b8b6c9623.png",
+    //     "title": "SBL GINSENG DILUTION 200 CH",
+    //     "discription": "bottle of 30 ml Dilution",
+    //     "currentPrice": "94.05",
+    //     "price": "95.00"
+    // }, {
+    //     "id": 13,
+    //     "discount": "1",
+    //     "image": "https://mednear.com/uploads/medicine/defd61ca9308614675e4849ef9006479.png",
+    //     "title": "SBL GINSENG DILUTION 200 CH",
+    //     "discription": "bottle of 30 ml Dilution",
+    //     "currentPrice": "94.05",
+    //     "price": "95.00"
+    // }, {
+    //     "id": 14,
+    //     "discount": "1",
+    //     "image": "https://mednear.com/uploads/medicine/409e8a3727b32dbb18f5fafd9b0cdcd7.jpg",
+    //     "title": "SBL GINSENG DILUTION 200 CH",
+    //     "discription": "bottle of 30 ml Dilution",
+    //     "currentPrice": "94.05",
+    //     "price": "95.00"
+    // }, {
+    //     "id": 15,
+    //     "discount": "1",
+    //     "image": "https://mednear.com/uploads/icons/otc.png",
+    //     "title": "SBL GINSENG DILUTION 200 CH",
+    //     "discription": "bottle of 30 ml Dilution",
+    //     "currentPrice": "94.05",
+    //     "price": "95.00"
+    // },];
+    // window.localStorage.setItem('data',JSON.stringify(data));
     var products_section = document.getElementById("products");
     var product_cards = "";
     for (var i = 0; i < data.length; i++) {
         let product = data[i];
         let product_card = `
         <div class="card">
-            <div class="card-body">
+            <div class="card-body cursor-pointer" onclick="openDetailPage('${product.id}')">
                 <div class="p-2">
                     <span class="offer">${product.discount}% OFF</span>
                     <div class="product-image">
@@ -308,6 +310,10 @@
         product_cards += product_card;
     }
     products_section.innerHTML = product_cards;
+    function openDetailPage(id) {
+        console.log(id);
+        window.location.href = `homeopathy_detail.html?id=${id}`;
+    }
 </script>
 
 </html>
