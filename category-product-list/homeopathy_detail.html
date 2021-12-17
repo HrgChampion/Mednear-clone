@@ -365,9 +365,10 @@
 
 <script>
     var data = JSON.parse(window.localStorage.getItem('data'));
+    var dataById = JSON.parse(window.localStorage.getItem('dataById'));
     let url = new URL(window.location.href);
     const id = url.searchParams.get('id');
-    console.log(id);
+    product_details = dataById[id];
     function takeMeToLink(site) {
         if (site == 'facebook') {
             window.location.href = "https://www.facebook.com";

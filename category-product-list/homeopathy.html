@@ -161,6 +161,7 @@
 
 <script>
     var data = JSON.parse(window.localStorage.getItem('data'));
+    var dataById = JSON.parse(window.localStorage.getItem('dataById'));
     // var data = [{
     //     "id": 1,
     //     "discount": "1",
@@ -282,6 +283,13 @@
     //     "currentPrice": "94.05",
     //     "price": "95.00"
     // },];
+    // var dataById = {};
+    // for (let i=0;i<data.length; i++){
+    //     let idTmp = data[i].id;
+    //     delete data[i].id;
+    //     dataById[idTmp]=data[i];
+    // }
+    // window.localStorage.setItem('dataById',JSON.stringify(dataById));
     // window.localStorage.setItem('data',JSON.stringify(data));
     var products_section = document.getElementById("products");
     var product_cards = "";
