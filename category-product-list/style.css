@@ -15,9 +15,13 @@
         }
 
         .container {
-            /* height: 100vh; */
+            height: cover;
             padding: 10px;
 
+
+        }
+        .hidden{
+            display: none;
         }
 .cursor-pointer:hover{
 cursor: pointer;
@@ -26,25 +30,44 @@ cursor: pointer;
             padding: 10px;
             width: 18%;
            float: left;
+           height: 100%;
         }
         
         #product {
-            display: grid;
-            grid-template-columns: repeat(5,1fr);
+            display: block;
+            height: 100%;
         }
 
         @media only screen and (min-width: 0px) and (max-width: 375px){
-            #product {
-                grid-template-columns: repeat(3,1fr);
+            .card {
+                width: 98%;
             }
         }
         
         @media only screen and (min-width:376px ) and (max-width:768px) {
-            #product {
-                grid-template-columns: repeat(5,1fr);
+            .card {
+                width: 48%;
+            }
+        }
+        
+        @media only screen and (min-width:768px ) and (max-width:1050px) {
+            .card {
+                width: 22%;
+            }
+            .container {
+                padding: 0;
+                margin: 0;
             }
         }
 
+        @media only screen and (min-width:1050px ) {
+            .card {
+                width: 18%;
+            }
+        }
+.row{
+    width: 100%;
+}
         .card-body:hover {
             box-shadow: 5px 4px 5px 4px rgba(0, 0, 0, .3);
         }
@@ -119,7 +142,16 @@ cursor: pointer;
             padding: 8px 12px;
             margin: 4px 2px;
             background-color: #189ea3;
-            float: right;
+        }
+.float-right{
+    float: right;
+
+}
+.px-1{
+    padding: 0 1vh;
+}
+        .small-round-button{
+            border-radius: 50%;
         }
 
         .button:hover{
@@ -131,6 +163,7 @@ cursor: pointer;
         .back-button-bottom {
             
             border: 1px solid #189ea3;
+
             border-radius: 5px;
             color: #189ea3;
             text-align: center;

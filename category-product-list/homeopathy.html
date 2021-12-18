@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="footer.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-
+    <script src="../products-js.js"></script>
     <!-- use the font -->
     <style>
         body {
@@ -25,11 +25,8 @@
 
         <div class="container">
             <section class="row" id="products"></section>
-            <button class="back-button-bottom">BACK</button>
-
         </div>
-
-
+        <button class="back-button-bottom">BACK</button>
 
 
         <div id="footer">
@@ -152,168 +149,44 @@
                             medical practitioner.</p>
             </div>
 
-
-
         </div>
     </div>
-
 </body>
 
 <script>
-    var data = JSON.parse(window.localStorage.getItem('data'));
-    var dataById = JSON.parse(window.localStorage.getItem('dataById'));
-    // var data = [{
-    //     "id": 1,
-    //     "discount": "1",
-    //     "image": "https://mednear.com/uploads/medicine/0c9b1dbfaeb21f9f0d8305888de0c5b6.jpg",
-    //     "title": "SBL FORMICA RUFA DILUTION 1000 CH",
-    //     "discription": "bottle of 30 ml Dilution",
-    //     "currentPrice": "118.00",
-    //     "price": "120.00"
-    // }, {
-    //     "id": 2,
-    //     "discount": "1",
-    //     "image": "https://mednear.com/uploads/medicine/4d5526dea6abc5f349c6baa25d06f688.png",
-    //     "title": "SBL GINSENG DILUTION 1000 CH",
-    //     "discription": "bottle of 30 ml Dilution",
-    //     "currentPrice": "17.00",
-    //     "price": "19.05"
-    // }, {
-    //     "id": 3,
-    //     "discount": "1",
-    //     "image": "https://mednear.com/uploads/medicine/3a6113060913ed8e34e33efdd9fe0494.jpg",
-    //     "title": "SBL GAULTHERIA PROCUMBENS DILUTION 30 CH",
-    //     "discription": "bottle of 30 ml Dilution",
-    //     "currentPrice": "84.15",
-    //     "price": "85.00"
-    // }, {
-    //     "id": 4,
-    //     "discount": "1",
-    //     "image": "https://mednear.com/uploads/medicine/836c2810b3347295726e274c8b12d530.png",
-    //     "title": "SBL 101 DIABETIC CARE PACK (COMBO OF 2)",
-    //     "discription": "Packet of 1 kit",
-    //     "currentPrice": "289.05",
-    //     "price": "295.00"
-    // }, {
-    //     "id": 5,
-    //     "discount": "1",
-    //     "image": "https://mednear.com/uploads/icons/otc.png",
-    //     "title": "SBL GAULTHERIA PROCUMBENS DILUTION 1000 CH",
-    //     "discription": "bottle of 30 ml Dilution",
-    //     "currentPrice": "65.85",
-    //     "price": "70.00"
-    // }, {
-    //     "id": 6,
-    //     "discount": "1",
-    //     "image": "https://mednear.com/uploads/medicine/4d5526dea6abc5f349c6baa25d06f688.png",
-    //     "title": "SBL LIQUID HAND WASH GERM FREE",
-    //     "discription": "bottle of 300 ml",
-    //     "currentPrice": "96.03",
-    //     "price": "97.00"
-    // }, {
-    //     "id": 7,
-    //     "discount": "1",
-    //     "image": "https://mednear.com/uploads/medicine/241b6fbcfa04407eb5009b14a6c6e8c2.png",
-    //     "title": "SBL GINSENG DILUTION 200 CH",
-    //     "discription": "bottle of 30 ml Dilution",
-    //     "currentPrice": "94.05",
-    //     "price": "95.00"
-    // }, {
-    //     "id": 8,
-    //     "discount": "1",
-    //     "image": "https://mednear.com/uploads/medicine/4d5526dea6abc5f349c6baa25d06f688.png",
-    //     "title": "SBL GINSENG DILUTION 200 CH",
-    //     "discription": "bottle of 30 ml Dilution",
-    //     "currentPrice": "212.36",
-    //     "price": "218.00"
-    // }, {
-    //     "id": 9,
-    //     "discount": "1",
-    //     "image": "https://mednear.com/uploads/medicine/b18fecf51bf0e7a01937bfc8cbcd5ff1.jpg",
-    //     "title": "SBL GINSENG DILUTION 200 CH",
-    //     "discription": "bottle of 30 ml Dilution",
-    //     "currentPrice": "44.05",
-    //     "price": "47.00"
-    // }, {
-    //     "id": 10,
-    //     "discount": "1",
-    //     "image": "https://mednear.com/uploads/medicine/0f2ac3530564254da7f82d1fb63aeb3c.jpg",
-    //     "title": "SBL GINSENG DILUTION 200 CH",
-    //     "discription": "bottle of 30 ml Dilution",
-    //     "currentPrice": "94.05",
-    //     "price": "95.00"
-    // }, {
-    //     "id": 11,
-    //     "discount": "1",
-    //     "image": "https://mednear.com/uploads/icons/otc.png",
-    //     "title": "SBL GINSENG DILUTION 200 CH",
-    //     "discription": "bottle of 30 ml Dilution",
-    //     "currentPrice": "94.05",
-    //     "price": "95.00"
-    // }, {
-    //     "id": 12,
-    //     "discount": "1",
-    //     "image": "https://mednear.com/uploads/medicine/ede5f4e0df80734ab5c1cd3b8b6c9623.png",
-    //     "title": "SBL GINSENG DILUTION 200 CH",
-    //     "discription": "bottle of 30 ml Dilution",
-    //     "currentPrice": "94.05",
-    //     "price": "95.00"
-    // }, {
-    //     "id": 13,
-    //     "discount": "1",
-    //     "image": "https://mednear.com/uploads/medicine/defd61ca9308614675e4849ef9006479.png",
-    //     "title": "SBL GINSENG DILUTION 200 CH",
-    //     "discription": "bottle of 30 ml Dilution",
-    //     "currentPrice": "94.05",
-    //     "price": "95.00"
-    // }, {
-    //     "id": 14,
-    //     "discount": "1",
-    //     "image": "https://mednear.com/uploads/medicine/409e8a3727b32dbb18f5fafd9b0cdcd7.jpg",
-    //     "title": "SBL GINSENG DILUTION 200 CH",
-    //     "discription": "bottle of 30 ml Dilution",
-    //     "currentPrice": "94.05",
-    //     "price": "95.00"
-    // }, {
-    //     "id": 15,
-    //     "discount": "1",
-    //     "image": "https://mednear.com/uploads/icons/otc.png",
-    //     "title": "SBL GINSENG DILUTION 200 CH",
-    //     "discription": "bottle of 30 ml Dilution",
-    //     "currentPrice": "94.05",
-    //     "price": "95.00"
-    // },];
-    // var dataById = {};
-    // for (let i=0;i<data.length; i++){
-    //     let idTmp = data[i].id;
-    //     delete data[i].id;
-    //     dataById[idTmp]=data[i];
-    // }
-    // window.localStorage.setItem('dataById',JSON.stringify(dataById));
-    // window.localStorage.setItem('data',JSON.stringify(data));
+    var data = getData('products');
+    var dataById = getData('productsById');
+    var cart = getData('cart');
     var products_section = document.getElementById("products");
     var product_cards = "";
     for (var i = 0; i < data.length; i++) {
         let product = data[i];
+        let cartCount = countInCart(product.id);
         let product_card = `
         <div class="card">
-            <div class="card-body cursor-pointer" onclick="openDetailPage('${product.id}')">
-                <div class="p-2">
-                    <span class="offer">${product.discount}% OFF</span>
-                    <div class="product-image">
-                        <img src="${product.image}" alt="">
+            <div class="card-body">
+                <span class="cursor-pointer" onclick="openDetailPage('${product.id}')">
+                    <div class="p-2">
+                        <span class="offer">${product.discount}% OFF</span>
+                        <div class="product-image">
+                            <img src="${product.image}" alt="">
+                        </div>
                     </div>
-                </div>
-                <h3 class="product-name">${product.title}</h3>
-                <div class="product-label mb-2">${product.discription}</div>
-                <button class="button" data-id="${product.id}">Add to Cart</button>
+                    <h3 class="product-name">${product.title}</h3>
+                    <div class="product-label mb-2">${product.discription}</div>
+                </span>
+                    <span id="in-card-${product.id}" class="alter-cart-buttons float-right" data-id="${product.id}" ${!cartCount?`hidden='hidden'`:null}>
+                        <button class="small-round-button button add-to-cart-button-plus" onclick="addToCart('${product.id}')">+</button>
+                        <span class="in-the-cart-count px-1">${cartCount}</span>
+                        <button class="small-round-button button add-to-cart-button-minus" onclick="removeTFromCart('${product.id}')">-</button>
+                    </span>
+                    <button id="not-card-${product.id}" class="button float-right add-to-cart-button" data-id="${product.id}" onclick="addToCartMain('${product.id}')" ${cartCount?`hidden='hidden'`:null}>Add to Cart</button>
                 <div class="product-price">
                     <div class="current-price" content="INR">&#8377; ${product.currentPrice} </div>
                     <div class="price">&#8377; ${product.price} </div>
                 </div>
             </div>
         </div>
-
         `;
         product_cards += product_card;
     }
