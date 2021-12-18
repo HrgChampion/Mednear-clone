@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+</head>
+<style>
+    .container {
+        display:grid;
+        grid-template-columns: 900px  400px;
+        justify-content: space-around;
+        width:80%;
+        margin:auto;
+        background-color: whitesmoke;
+        grid-gap:20px;
+    }
+    .itemsummary {
+    padding: 10px;
+    background-color: white;
+    
+    }
+    #Note {
+        color:lightseagreen;
+        text-align: center;
+        font-size: 15px;
+    }
+    .order {
+        display:grid; 
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        background-color: white;
+    }
+    .order > p {
+        padding:0px 10px;
+    }
+    .pricesummary {
+        background-color: white;
+        padding:20px;
+    }
+    #TS {
+        display:grid; 
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        background-Color:azure;
+    }
+    #TotalSaving {
+        color: lightseagreen;
+    }
+    #Discount {
+        color: lightseagreen;
+    }
+    #btn1 {
+        color:white;
+        background-color:lightseagreen;
+        width:100%;
+        font-weight: bold;
+        border:none;
+        border-radius: 3px;
+        margin-top: 10px;
+    }
+    #btn2 {
+        color:white;
+        background-color:darkslategrey;
+        width:100%;
+        font-weight: bold;
+        border:none;
+        border-radius: 3px;
+        margin-top: 10px;
+    }
+    #bg {
+        background-color: whitesmoke;
+    }
+    .footer {
+        background-color: white;
+        width:100%;
+    }
+    #items {
+        display:flex;
+        flex-direction: column;
+    }
+    #items > div {
+        height:150px;
+        width:100%;
+        margin-bottom:10px;
+    }
+    @media only screen and (min-width:0px) and (max-width:1000px) {
+        .container {
+            display:grid;
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+    @media only screen and (min-width:1001px){
+        .container {
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    
+</style>
+
+<body id="bg">
+    <div>
+        <h1>Navigation Bar</h1>
+    </div>
+    <div class= "container">
+        <div class="itemsummary">
+            <h2 id="myCart"></h2>
+            <hr>
+            <div id="items">
+                <div></div>
+            </div>
+            <p id="Note">Note: Prices shown above are an estimate, the actual prices will notified once your order is ready for dispatch.</p>
+        </div>
+        <div class="pricesummary">
+            <div>
+                <h3>Order Summary</h3>
+            </div> 
+            <div class="order">
+               <p>Total Price</p>
+               <p id="totalPrice"></p>
+            </div>
+            <div class="order">
+                <p>Price Discount</p>
+                <p id="Discount"></p>
+             </div>
+             <div class="order">
+                <p>Sub Total</p>
+                <p id="Total"></p>
+             </div>
+             <hr>
+             <div class="order">
+                <h5>Net Amount</h5>
+                <h5 id="price"></h5>
+             </div>
+             <div id="TS">
+                 <h4>Total Saving</h4>
+                 <h4 id="totalSaving"></h4>
+             </div>
+             <div>
+                 <button id="btn1">
+                     <h3>Proceed to Checkout</h3>
+                 </button>
+             </div>
+             <div>
+                <button id="btn2">
+                    <h3>Continue Shoping</h3>
+                </button>
+            </div>
+            <div>
+                <p id="Note">Note:Availability / Confirmation & Deliveries of product will be assured once the Pharmacy partners & Shipping partners are confirmed.
+                    <ol>
+                        <li id="Note">Do not share your credentials or otp with anyone on call,email or sms.</li>
+                        <li id="Note">MedNear never asks you for your credentials or otp.</li>
+                        <li id="Note">Always create a strong password and keep different passwords for different websites.</li>
+                    </ol>
+                </p>
+            </div>
+        </div>
+    </div>
+    <hr>
+</body>
+</html>
+
+<script>
+  var arr = JASON.parse(localStorage.getItem(""));
+  displayItems(arr);
+
+  function displayItems(arr) {
+      arr.map(function(elem) {
+          var row = document.createElement("tr");
+
+          var img = document.createElement("td");
+          tdimg = elem.itemimage;
+
+          var name = document.createElement("td");
+          tdname.textcontent = elem.itemname;
+
+          var qty = document.createElement("td");
+          tdqty.textcontent = option;
+
+          var price = document.createElement("td");
+          tdprice.textContent = elem.price;
+
+          var tddelete = document.createElement("td");
+          tddelete.textContent = "Delete";
+          tddelete.addEventListener("click",deleteItem)
+          
+          row.append(img , name, qty, price, tddelete);
+          document.querySelector("tbody").append(row);
+
+          var totalPrice = totalPrice + (+elem.price);
+
+          var priceDiscount = priceDiscount + (+elem.discount);
+
+          var total = totalPrice - priceDiscount;
+
+          document.getElementById("myCart").innertext = "My Cart(" + arr.length + ")";
+          document.getElementById("totalPrice").innertext = totalPrice;
+          document.getElementById("discount").innerText = priceDiscount;
+          document.getElementById("total").innertext = total;
+          document.getElementById("price").innertext = total;
+          document.getElementById("totalSaving").innertext = priceDiscount;
+      })
+  }
+
+  function deleteItem(event) {
+      event.target.parent.remove();
+  }
+
+  localStorage.setItem("total",total);
+</script>
