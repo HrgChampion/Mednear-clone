@@ -31,6 +31,7 @@ function incfun(){
 console.log(count)
 
 }
+
 function decfun(){
     
     count--;

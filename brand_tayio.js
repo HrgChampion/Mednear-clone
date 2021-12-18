@@ -107,6 +107,7 @@ var sum=JSON.parse(localStorage.getItem("button2"))||1;
           return count;
       }
       })
+
       var button2=document.createElement("button");
       button2.textContent="+"; 
       button2.addEventListener("click",function(){

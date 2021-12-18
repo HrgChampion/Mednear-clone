@@ -17,6 +17,7 @@ var count=JSON.parse(localStorage.getItem("button"))||1;
            "strikeprice": "₹ 430.00",
         }
     ];
+    
     localStorage.setItem("product",JSON.stringify(data));
     document.querySelector("#btn").addEventListener("click",addItem);
 

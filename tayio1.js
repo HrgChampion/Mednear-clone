@@ -30,6 +30,7 @@ function incfun(event){
     
 console.log(count)
 }
+
 function decfun(event){
     event.preventDefault()
     count--;

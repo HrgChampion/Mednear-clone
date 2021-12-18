@@ -16,6 +16,7 @@ var data=[
        "strikeprice": "₹ 390.00",
     },
 ];
+
 localStorage.setItem("product",JSON.stringify(data));
 
 document.querySelector("#add").addEventListener("click",incfun);
