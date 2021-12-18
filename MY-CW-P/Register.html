@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 68%;
+            height: 550px;
+            border: 1px solid transparent;
+            margin: auto;
+            display: flex;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 15px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+        .box1 {
+            width: 50%;
+            height: 300px;
+            border: 1px solid transparent;
+            margin-top: 100px;
+        }
+
+        .box2 {
+            width: 60%;
+            height: 530px;
+            border: 1px solid transparent;
+            margin-left: 60px;
+            padding: 20px;
+
+            /* box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px; */
+
+        }
+
+        .box2>div {
+            margin-top: 10px;
+
+
+        }
+
+        #buyerName {
+            width: 80%;
+            height: 35px;
+            border-radius: 3px;
+
+        }
+
+        #mobile {
+            width: 80%;
+            height: 35px;
+            border-radius: 5px;
+        }
+
+        #eamil {
+            width: 80%;
+            height: 35px;
+            border-radius: 5px;
+        }
+
+        #setpassword {
+            width: 80%;
+            height: 35px;
+            border-radius: 5px;
+        }
+
+        #compassword {
+            width: 80%;
+            height: 35px;
+            border-radius: 5px;
+        }
+
+        #signupBtn {
+            background-color: teal;
+            width: 80%;
+            height: 35px;
+            border-radius: 5px;
+        }
+
+        h4 {
+            color: teal;
+            border-radius: 5px;
+        }
+
+        @media only screen and (min-width: 375px) and (max-width: 768px) {
+            .container {
+                display: flex;
+                width: 50%;
+            }
+        }
+
+        @media only screen and (min-width: 0px) and (max-width: 375px) {
+            .container {
+                display: flex;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>navebar</h1>
+    <div class="container">
+        <div class="box1">
+            <img src="https://mednear.com/assets/web/images/others/mn-login-banner.jpg" alt="" height="100%"
+                width="100%">
+        </div>
+        <form id="signup-form" action="home.html">
+            <div class="box2">
+                <h4>Sign Up</h4>
+                <p>Signup now & to get ₹50 MNCASH. We don't share your personal details with anyone.</p>
+                <div>
+                    <input type="text" id="buyerName" placeholder="Name" class="form-control " required />
+                </div>
+
+                <div>
+                    <input id="mobile" type="number" placeholder="Mobile Number" required />
+                </div>
+
+                <div>
+                    <input id="eamil" type="text" placeholder="Email Addres(optional)" required />
+                </div>
+
+                <div>
+                    <input id="setpassword" type="setpassword" placeholder="Set Password" required />
+                </div>
+
+                <div>
+                    <input id="compassword" type="compassword" placeholder="Confirm Password" required />
+                </div>
+                <br>
+                <p1>By signing up, you agree to our <span><a href="">Terms and Conditions</a></span></p1>
+                <div>
+                    <input name="signupBtn" value="Submit" type="submit" id="signupBtn" />
+                </div>
+                <P2>Existing User? <span><a href="login.html">Login</a></span></P2>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
+
+
+<script>
+    document.querySelector("#signup-form").addEventListener("submit", () => {
+        var userdata = JSON.parse(localStorage.getItem("objkey")) || [];
+
+
+        //    console.log("Singup")
+        var name = document.querySelector("#buyerName").value;
+
+        var number = document.querySelector("#mobile").value;
+        var eamils = document.querySelector("#eamil").value;
+        var pass = document.querySelector("#setpassword").value;
+        var compass = document.querySelector("#compassword").value;
+
+        var obj = {
+            name: name,
+            number: number,
+            email: eamils,
+            password: pass,
+            compassword: compass,
+        }
+        userdata.push(obj)
+
+        console.log(obj)
+
+        localStorage.setItem(("objkey"), JSON.stringify(userdata));
+        window.location.href = "home.html";
+        console.log(window.location.href);
+
+    });
+</script>
