@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   
+#container>div{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    border-top:0.1px solid #cdcdcd;
+    border-bottom:0.2px solid #cdcdcd;
+    padding:5px;
+
+}
+.first_div{
+    
+    position:fixed;
+    z-index:35;
+    margin:0;
+}
+
+.med_image{
+width: 200px;
+    height: 60px;
+    margin-left: 40px;
+    margin-top: 10px;
+  
+}
+.search_box{
+  display: flex;
+  height: 50px;
+  width: 750px;
+ 
+  margin:15px;
+  border: 1px solid #cdcdcd;
+  border-radius: 10px;
+  
+}
+.search{
+height: 48px;
+  width: 93%;
+  
+  border:0 ;
+  border-radius: 10px;
+  font-size: 17px;
+}
+input:focus, textarea:focus, select:focus{
+        outline: none;
+    }
+
+.search_tag_img{
+  margin: 3px;
+  width: 35px;
+  height: 35px;
+  padding:4px;
+  border-radius: 50%;
+  background-color: white;
+  
+}
+.search_tag_img:hover{
+background-color: #eff5f5; 
+
+}
+.order_div{
+   display: flex;
+   width: 170px;
+  height: 35px;
+  border-radius: 8px;
+  background-color: #189ea3;
+  color:white;
+   padding:8px;
+  margin-top:15px;
+  margin-right: 10px;
+  
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.order_div:hover{
+    color: #cad6d6;
+    cursor: pointer;
+}
+.order{
+width: 130px;
+height: 40px;
+font-size: 13px;
+margin-left: 9px;
+}
+.order>div:nth-child(1){
+    font-weight: bolder;
+}
+.order_img{
+width: 48px;
+  height:40px;
+
+  
+}
+.log_div{
+  display: flex;
+width: 160px;
+padding: 5px;
+height: 40px;
+margin-top: 15px;
+}
+.log_div:hover{
+color: #93b3b4;
+cursor: pointer;
+}
+.log{
+width: 100px;
+height: 25px;
+color:#4d4e4e;
+font-size:15px;
+margin-top: 14px;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-weight: bold;
+margin-left: 15px;
+}
+.log:hover{
+    color:#189ea3;
+}
+.log_img{
+width: 28px;
+height: 42px;
+margin-top: 5px;
+margin-bottom: 15px; 
+margin-left: 18px; 
+border-radius: 50%;
+  background-color: rgb(243, 240, 240);
+  
+}
+ .tag{
+width: 25px;
+height: 25px;
+margin: 17px; 
+margin-left: 13px;
+border-radius: 50%;
+padding:10px;
+background-color: rgb(243, 240, 240);
+ 
+}
+.tag:hover{ 
+cursor: pointer;
+background-color:  rgb(215, 226, 226);
+}
+
+
+
+
+    </style>
+</head>
+<body>
+     <div id="container">
+         <div class="first_div">
+             <img class="med_image" src="https://mednear.com/assets/web/images/logo-big.svg">
+             <div class="search_box">
+                 <input class="search" placeholder=" Search for your Medicines / Health Products">
+                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDzPeAUyLLo3UCnb7d-LD8nP97UPPhIUGiG_43Bk-h7ZXopeKVXy_YGm_HfdyUfibvlOE&amp;usqp=CAU" class="search_tag_img">
+                </div>
+                <div class="order_div">
+                    <img src="https://cdn-icons-png.flaticon.com/128/1092/1092216.png" class="order_img">
+                    <div class="order">
+                        <div>Quick order</div>
+                        <div>Upload Prescription</div>
+                    </div>
+                </div>
+                    <div class="log_div">
+                        <img src="data:image/png;base64,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" class="log_img">
+                        <div class="log">Login/signin</div>
+                    </div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT734twAiYRWM-UV44nT_82GMF2jCVnqRpWeHdKhxST87ziWcOwvJm2AlxGnFgWaPaVCoo&amp;usqp=CAU" class="tag">
+                </div>
+     </div>
+</body>
+</html>
