@@ -207,7 +207,7 @@ let products_list = [
     price: "85.00",
   },
   {
-    id: 74,
+    id: 75,
     discount: "1",
     image:
       "https://mednear.com/uploads/medicine/3a6113060913ed8e34e33efdd9fe0494.jpg",
