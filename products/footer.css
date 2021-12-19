@@ -1,0 +1,56 @@
+#footer {
+  width: 100%;
+  font-family: sans-serif;
+  display: block;
+  
+}
+#payment {
+  text-align: center;
+}
+#brand {
+  margin: auto;
+  text-align: center;
+  width: 90%;
+}
+a {
+  text-decoration: none;
+  color: rgb(49, 42, 42);
+  margin-left: 10px;
+}
+h3 {
+  color: black;
+}
+#online {
+  margin: auto;
+  text-align: center;
+  width: 90%;
+  color: rgb(90, 79, 79);
+}
+#mednear {
+  margin: auto;
+  margin-top: 40px;
+  text-align: center;
+  width: 90%;
+  color: rgb(77, 64, 64);
+}
+#blog {
+  margin: auto;
+  margin-top: 40px;
+  width: 90%;
+  color: rgb(77, 64, 64);
+  display: flex;
+  justify-content: space-around;
+}
+#end {
+  margin: auto;
+  margin-top: 40px;
+  text-align: center;
+  width: 90%;
+  color: rgb(77, 64, 64);
+}
+b {
+  color: rgb(14, 11, 11);
+}
+p1 {
+  font-size: 12px;
+}
