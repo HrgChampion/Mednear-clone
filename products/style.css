@@ -1,6 +1,9 @@
 
         .main-container {
             height: 100vh;
+            padding: 0;
+            margin: 0;
+            width: 100%;
         }
 
         .navbar-top {
@@ -18,10 +21,12 @@
             height: 100vh;
             padding: 10px;
 
-
         }
         .hidden{
             display: none;
+        }
+        .text-sm{
+            font-size: 14px;
         }
 .cursor-pointer:hover{
 cursor: pointer;
@@ -32,7 +37,9 @@ cursor: pointer;
            float: left;
            height: 100%;
         }
-        
+        .margin-top-80px{
+            margin-top: 80px;
+        }
         #product {
             display: block;
             height: 100%;
@@ -62,11 +69,15 @@ cursor: pointer;
 
         @media only screen and (min-width:1050px ) {
             .card {
-                width: 18%;
+                width: %;
             }
         }
 .row{
     width: 100%;
+}
+.nav-container{
+    top:0;
+    position: absolute;
 }
         .card-body:hover {
             box-shadow: 5px 4px 5px 4px rgba(0, 0, 0, .3);
@@ -75,6 +86,7 @@ cursor: pointer;
         .card-body {
             box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
             border-radius: 5px;
+            background-color: #fff;
             padding: 10px;
         }
         
