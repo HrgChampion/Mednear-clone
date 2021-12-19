@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 30%;
+            height: 50%;
+            border: 1px solid transparent;
+            margin: auto;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin-top: 50px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            border-radius: 20px;
+        }
+        img{
+            border-radius: 5px;
+        }
+        #login{
+            padding-left: 25px;
+        }
+    
+         h4{
+          color: teal;
+        }
+        #mobile{
+            width: 90%;
+            height: 35px;
+            border-radius: 5px;
+        }
+        #password{
+            width: 90%;
+            height: 35px;
+            border-radius: 5px;
+        }
+        #LoginBtn{
+            background-color:#189ea3;
+            width: 90%;
+            height: 35px;
+            border-radius: 5px;
+        }
+        @media only screen and (min-width: 375px) and (max-width: 768px) {
+            .container {
+                display: flex;
+                width: 50%;
+            }
+        }
+
+        @media only screen and (min-width: 0px) and (max-width: 375px) {
+            .container {
+                display: flex;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div>
+       <img src="https://mednear.com/uploads/files/file_1620363420.jpg" alt="" height="100%" width="100%" >
+    </div>
+    <div id="login">
+        <form>
+            <div>
+                <h4>Login</h4>
+                <input id="mobile" type="number" placeholder="+91-Mobile Number">
+               <!-- <span>+91 -</span> -->
+            </div>
+            <br>
+            <div>
+                <input id="password" type="password" placeholder="password" minlength="10"/>
+            </div>
+            <br>
+            <div>
+                <input type="checkbox" id="loginotp" class="loginotp" name="loginotp">
+            <label for="loginotp">Login with OTP</label>
+            </div>
+            <br>
+            <div>
+                <button name="loginBtn" type="button" id="LoginBtn" >Login</button>
+            </div>
+            <p1>New to Mednear? <span><a href="Register.html">Register</a></span></p1>
+        </form>
+    </div>
+    </div>
+</body>
+</html>
+
+<script>
+    document.querySelector("#LoginBtn").addEventListener("click",Login);
+    var arr=JSON.parse(localStorage.getItem("user")) || []
+
+    function Login(){
+        var number=document.querySelector("#mobile").value;
+        var pass=document.querySelector("#password").value;
+
+        var obj={
+            number:number,
+            pass:pass,
+        }
+         
+        for(var i=0; i<arr.length; i++){
+           if(arr[i].number===number && arr[i]===pass)
+           console.log("arr")
+        }
+      
+        
+        arr.push(obj)
+        // localStorage.setItem("user",JSON.stringify(arr))
+         window.location.href="home.html"
+    }
+</script>
