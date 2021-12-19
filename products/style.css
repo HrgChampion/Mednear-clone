@@ -15,7 +15,7 @@
         }
 
         .container {
-            height: cover;
+            height: 100vh;
             padding: 10px;
 
 
@@ -38,15 +38,15 @@ cursor: pointer;
             height: 100%;
         }
 
-        @media only screen and (min-width: 0px) and (max-width: 375px){
+        @media only screen and (min-width: 0px) and (max-width: 470px){
             .card {
-                width: 98%;
+                width: 96%;
             }
         }
         
-        @media only screen and (min-width:376px ) and (max-width:768px) {
+        @media only screen and (min-width:470px ) and (max-width:768px) {
             .card {
-                width: 48%;
+                width: 45%;
             }
         }
         
