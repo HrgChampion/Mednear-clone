@@ -1,0 +1,190 @@
+
+        .main-container {
+            height: 100vh;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+
+        .navbar-top {
+            height: 80px; 
+            font-size: larger;
+            border: 1px solid #189ea3;
+        }
+        .bradcum {
+            height: 30px;
+            border: 1px solid #189ea3;
+            margin: 5px;
+        }
+
+        .container {
+            height: 100vh;
+            padding: 10px;
+
+        }
+        .hidden{
+            display: none;
+        }
+        .text-sm{
+            font-size: 14px;
+        }
+.cursor-pointer:hover{
+cursor: pointer;
+}
+        .card {
+            padding: 10px;
+            width: 18%;
+           float: left;
+           height: 100%;
+        }
+        .margin-top-80px{
+            margin-top: 80px;
+        }
+        #product {
+            display: block;
+            height: 100%;
+        }
+
+        @media only screen and (min-width: 0px) and (max-width: 470px){
+            .card {
+                width: 96%;
+            }
+        }
+        
+        @media only screen and (min-width:470px ) and (max-width:768px) {
+            .card {
+                width: 45%;
+            }
+        }
+        
+        @media only screen and (min-width:768px ) and (max-width:1050px) {
+            .card {
+                width: 22%;
+            }
+            .container {
+                padding: 0;
+                margin: 0;
+            }
+        }
+
+        @media only screen and (min-width:1050px ) {
+            .card {
+                width: %;
+            }
+        }
+.row{
+    width: 100%;
+}
+.nav-container{
+    top:0;
+    position: absolute;
+}
+        .card-body:hover {
+            box-shadow: 5px 4px 5px 4px rgba(0, 0, 0, .3);
+        }
+        
+        .card-body {
+            box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+            border-radius: 5px;
+            background-color: #fff;
+            padding: 10px;
+        }
+        
+        .offer {
+            border: 1px solid #189ea3;
+            border-radius: 3px;
+            z-index: 1;
+            font-size: 10px;
+            font-weight: 500;
+            padding: 3px;
+            float: left;
+            color: #189ea3;
+        }
+        
+        .p-2 {
+            padding: 2vh;
+        }
+        
+        .product-image {
+            margin: 0 auto;
+        }
+        
+        .product-image img {
+            max-width: 140px;
+        }
+        
+        .product-name {
+            font-size: 14px;
+            line-height: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #4d4e4e;
+            margin: 5px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .product-label {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        
+        .mb-2 {
+            margin-bottom: 2vh;
+        }
+        
+        .product-price .current-price {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .product-price .price {
+            text-decoration: line-through;
+            font-size: 12px;
+        }
+        
+        .button {
+            border: 1px solid #189ea3;
+            border-radius: 5px;
+            color: white;
+            text-align: center;
+            font-size: 14px;
+            padding: 8px 12px;
+            margin: 4px 2px;
+            background-color: #189ea3;
+        }
+.float-right{
+    float: right;
+
+}
+.px-1{
+    padding: 0 1vh;
+}
+        .small-round-button{
+            border-radius: 50%;
+        }
+
+        .button:hover{
+            cursor: pointer;
+            box-shadow: rgba(45, 35, 66, .4) 0 4px 8px;
+            transform: translateY(-2px);
+        }
+
+        .back-button-bottom {
+            
+            border: 1px solid #189ea3;
+
+            border-radius: 5px;
+            color: #189ea3;
+            text-align: center;
+            font-size: 14px;
+            padding: 8px 40px;
+            margin: 4px 2px;
+            background-color: white;
+        }
+        .back-button-bottom:hover {
+            background-color: #189ea3;
+            color: black;
+        }
