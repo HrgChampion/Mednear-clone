@@ -195,6 +195,28 @@ let products_list = [
     forPage: "ayurvedic",
     price: "85.00",
   },
+  {
+    id: 74,
+    discount: "1",
+    image:
+      "https://mednear.com/uploads/medicine/3a6113060913ed8e34e33efdd9fe0494.jpg",
+    title: "SBL GAULTHERIA PROCUMBENS DILUTION 30 CH",
+    discription: "bottle of 30 ml Dilution",
+    currentPrice: "84.15",
+    forPage: "eldercare",
+    price: "85.00",
+  },
+  {
+    id: 74,
+    discount: "1",
+    image:
+      "https://mednear.com/uploads/medicine/3a6113060913ed8e34e33efdd9fe0494.jpg",
+    title: "Baby Care product",
+    discription: "bottle of 30 ml Dilution",
+    currentPrice: "84.15",
+    forPage: "babycare",
+    price: "85.00",
+  },
 ];
 let pages_record = {
   homeopathy: {
