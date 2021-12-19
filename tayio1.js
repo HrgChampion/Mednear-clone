@@ -42,3 +42,16 @@ function decfun(event){
     document.querySelector("#num").textContent=count;
    
 }
+document.querySelector(".log_div").addEventListener("click",function(){
+    window.location.href="navRegister.html"
+})
+document.querySelector(".order_div").addEventListener("click",function(){
+    window.location.href="prescription.html"
+})
+document.querySelector(".med_image").addEventListener("click",function(){
+    window.location.href="land.html"
+})
+document.querySelector(".tagup").addEventListener("click",function(){
+    window.location.href="Addtocart.html"
+})
+ 

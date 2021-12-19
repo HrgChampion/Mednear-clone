@@ -164,7 +164,20 @@ var data=[
      
     document.querySelector(".button2").append(button1,num,button2);
     localStorage.setItem("button2",JSON.stringify(sum));
+    
      
    
  }
+ document.querySelector(".log_div").addEventListener("click",function(){
+    window.location.href="navRegister.html"
+})
+document.querySelector(".order_div").addEventListener("click",function(){
+    window.location.href="prescription.html"
+})
+document.querySelector(".med_image").addEventListener("click",function(){
+    window.location.href="land.html"
+})
+document.querySelector(".tagup").addEventListener("click",function(){
+    window.location.href="Addtocart.html"
+})
  
