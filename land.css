@@ -368,6 +368,9 @@
     margin-left: 33px;
     font-size: 20px;
   }
+  .p{
+    margin-top: 100px;
+  }
   .petter {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

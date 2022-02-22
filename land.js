@@ -171,6 +171,9 @@ document.querySelector("#scr5").addEventListener("click",function(){
 
 
 document.querySelector(".first_div>img").addEventListener("click" , function(){
- window.location.href="land.html";
+ window.location.href="index.html";
 });
+document.querySelector(".tag").addEventListener("click" , function(){
+    window.location.href="\Addtocart.html";
+   });
 

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #head{
+           
+            /* border:1px solid rgb(20, 18, 18); */
+            margin: auto;
+            font-size: 16px;
+            width: 90%;
+        }
+
+        #head>hr{
+         border:0.9px rgb(207, 184, 184) dotted;
+         margin:10px;
+        
+        }
+    
+        #main_div{
+            width: 90%;
+        height:950px; 
+        margin:auto;
+         border:1px solid rgb(230, 229, 229);
+        }
+        h1{
+           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin-left: 10px;
+            color:#189ea3;
+        }
+        h1:hover{
+    color:#189ea3;
+    /* box-shadow: rgba(82, 80, 80, 0.2) 0px 7px 29px 0px; */
+    /* border:1px solid red; */
+        }
+        #all_cat{
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            grid-template-rows:repeat(7,1fr) ;
+        }
+
+        #all_cat>div{
+        width: 100%;
+        height:120px;
+        /* border:1px solid rgb(245, 242, 242); */
+        border:1px solid rgb(230, 229, 229);
+        /* padding:10px; */
+        text-align: center;
+        line-height: 5px;
+        margin-top: 0;
+    
+        }
+        #all_cat>div:hover{
+         
+    color:#189ea3;
+    box-shadow: rgba(82, 80, 80, 0.2) 0px 7px 29px 0px;
+    /* border:1px solid red; */
+
+        }
+        .image{
+            height: 50px;
+            width: 50px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+           /* line-height: 50px; */
+           margin-top:20px;
+        }
+        /* @media only screen and (min-width:320px) and (max-width:568px){
+           
+           #all_cat>div{
+
+           display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows:repeat(7,300px);
+            height:300px;
+        }
+    } */
+
+
+
+
+    /* nav bar code */
+    body {
+        background-color: #f3f3f3;
+      }
+      #container > div {
+        display: flex;
+        position: top;
+        /* z-index: 35;   */
+        width: 100%;
+        height: 80px;
+        background-color: white;
+      }
+      .first_div {
+        /* border: 3px solid rgb(177, 46, 46); */
+        position: fixed;
+        z-index: 35;
+        /* box-shadow: rgba(67, 67, 68, 0.2) 0px 7px 29px 0px; */
+        margin: 0;
+      }
+      .med_image {
+        width: 200px;
+        height: 70px;
+        margin-left: 40px;
+      }
+      .search_box {
+        display: flex;
+        height: 50px;
+        width: 550px;
+        /* padding:auto; */
+        margin: 15px;
+        border: 1px solid rgb(197, 193, 193);
+        border-radius: 10px;
+      }
+      .search {
+        height: 48px;
+        width: 83%;
+        /* padding:auto; */
+        /* margin:2px; */
+        border: 0;
+        border-radius: 10px;
+        font-size: 17px;
+      }
+      .search_tag_img {
+        margin: 3px;
+        width: 35px;
+        height: 35px;
+        padding: 4px;
+        border-radius: 50%;
+        background-color: white;
+      }
+      .search_tag_img:hover {
+        background-color: #eff5f5;
+      }
+      .order_div {
+        display: flex;
+        width: 170px;
+        height: 35px;
+        border-radius: 8px;
+        background-color: #189ea3;
+        color: white;
+        padding: 8px;
+        margin-top: 20px;
+        margin-right: 10px;
+      }
+      .order_div:hover {
+        color: #cad6d6;
+        cursor: pointer;
+      }
+      .order {
+        width: 130px;
+        height: 40px;
+        font-size: 15px;
+        line-height: 18px;
+        margin-left: 9px;
+      }
+      .order_img {
+        width: 48px;
+        height: 40px;
+      }
+      .log_div {
+        display: flex;
+        width: 160px;
+        padding: 5px;
+        height: 40px;
+        margin-top: 15px;
+      }
+      .log_div:hover {
+        color: #93b3b4;
+        cursor: pointer;
+      }
+      .log {
+        width: 100px;
+        height: 25px;
+        text-align: left;
+        font-size: 20px;
+        margin: 8px;
+      }
+      .log_img {
+        width: 28px;
+        height: 27px;
+        border-radius: 50%;
+        background-color: rgb(243, 240, 240);
+        padding: 5px;
+      }
+      .tag {
+        width: 27px;
+        height: 27px;
+        margin: 17px;
+        margin-left: 3px;
+        border-radius: 50%;
+        padding: 10px;
+        background-color: rgb(243, 240, 240);
+      }
+      .tag:hover {
+        cursor: pointer;
+        background-color: rgb(215, 226, 226);
+      }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+
+    <div id="head"><b><br> <br> <br><br> <br><br>Home</b> / All Categories
+       <hr></div>
+ 
+   <div id="main_div">
+       <h1>All Categories</h1>
+    <div id= "all_cat">
+    </div>
+</div>
+
+
+</body>
+</html>
+<script src="more.js"></script>
