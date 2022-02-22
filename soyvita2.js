@@ -47,7 +47,7 @@ document.querySelector(".order_div").addEventListener("click",function(){
     window.location.href="prescription.html"
 })
 document.querySelector(".med_image").addEventListener("click",function(){
-    window.location.href="land.html"
+    window.location.href="index.html"
 })
 document.querySelector(".tagup").addEventListener("click",function(){
     window.location.href="Addtocart.html"
