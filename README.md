@@ -8,7 +8,7 @@ Website link -https://mednear.netlify.app
 
 Blog link - https://medium.com/@hgauba4/how-did-our-team-build-the-mednear-clone-241227129f79
 
-Video link-https://drive.google.com/file/d/1QefiKXiqRqxXVB3HgD7sj2sGLI7FaVxj/view?usp=sharing
+Video link-https://www.youtube.com/watch?v=BRRmteRFgLc
 
 Landing page
 ![Screenshot (51)](https://user-images.githubusercontent.com/92039719/146751882-74b2fdc8-924f-4b46-9246-5b034e587c5f.png)
